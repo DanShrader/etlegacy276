@@ -1,3 +1,3 @@
 FROM ubuntu:18.04
-
-CMD /bin/bash run.sh
+COPY run.sh /
+ENTRYPOINT ["/run.sh"]
