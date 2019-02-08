@@ -24,4 +24,4 @@ WORKDIR $ETL_PATH
 # ENTRYPOINT ./etlded_bot.sh
 
 COPY userScript.sh /root/etlegacy/etmain/userScript.sh
-ENTRYPOINT ["/bin/bash" , "-c", "source /userScript.sh"]
+ENTRYPOINT ["/bin/bash" , "-c", "source /root/etlegacy/etmain/userScript.sh"]
