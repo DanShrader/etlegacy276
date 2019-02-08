@@ -8,7 +8,7 @@ RUN wget -O etlegacy-v2.75-x86_64.tar.gz https://www.etlegacy.com/download/file/
 && tar -xzf etlegacy-v2.75-x86_64.tar.gz && rm -f etlegacy-v2.75-x86_64.tar.gz \
 && mv etlegacy-v2.75-x86_64 $ETL_PATH
 
-ENV PAK_MIRROR www.harryhomers.org/et/download/etmain/
+ENV PAK_MIRROR mirror.etlegacy.com/etmain/
 
 WORKDIR $ETL_PATH/etmain
 RUN wget http://$PAK_MIRROR/pak0.pk3 \
@@ -18,7 +18,7 @@ RUN wget http://$PAK_MIRROR/pak0.pk3 \
 
 COPY etl_server.cfg /root/etlegacy/etmain/
 
-EXPOSE 27960/udp
+EXPOSE 27961/udp
 
 WORKDIR $ETL_PATH
 # ENTRYPOINT ./etlded_bot.sh
