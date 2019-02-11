@@ -5,7 +5,7 @@ Enemy Territory Legacy mod server image
 
 
 ### Run:
-'''docker run -p 27961:27961/udp --name etlegacy danshrader/etlegacy-server-lan276'''
+'''docker run -p 27960:27960/udp --name etlegacy danshrader/etlegacy-server-lan276'''
 
 ### Dockerhub:
 https://hub.docker.com/r/danshrader/etlegacy-server-lan276/
