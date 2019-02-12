@@ -1,9 +1,20 @@
 #!/bin/bash
 echo "This is the data passed from the user"
-echo "-------------------------------------"
-echo $1
+echo "------------------------------------------"
+echo $repo
+
+
+echo "Cloning the git repo - must be accessable"
+echo "------------------------------------------"
+git clone $repo files
+
+
+echo "Copying all the files in the git repo"
+echo "------------------------------------------"
+cp -r ./files/* .
+cp -r ./files/* ./etmain .
 
 echo ""
 echo "Starting the server..."
-echo "-------------------------------------"
-./etlded_bot.sh
+echo "------------------------------------------"
+sh ./startScript.sh
