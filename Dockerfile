@@ -17,11 +17,10 @@ RUN wget http://$PAK_MIRROR/pak0.pk3 \
 && wget http://$PAK_MIRROR/mp_bin.pk3
 
 COPY etl_server.cfg /root/etlegacy/etmain/
-
 EXPOSE 27960/udp
-
 WORKDIR $ETL_PATH
-# ENTRYPOINT ./etlded_bot.sh
+RUN apt-get -y install git
 
 COPY userScript.sh /root/etlegacy/etmain/userScript.sh
+
 ENTRYPOINT ["/bin/bash" , "-c", "source /root/etlegacy/etmain/userScript.sh"]
