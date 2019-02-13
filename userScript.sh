@@ -6,7 +6,7 @@ echo $repo
 
 echo "Cloning the git repo - must be accessable"
 echo "------------------------------------------"
-git clone $repo files
+git clone $repo /root/etlegacy/etmain/files
 
 
 echo "Copying all the files in the git repo"
