@@ -6,6 +6,7 @@ echo $repo
 
 echo "Cloning the git repo - must be accessable"
 echo "------------------------------------------"
+rm -rf /root/etlegacy/etmain/files
 git clone $repo /root/etlegacy/etmain/files
 
 

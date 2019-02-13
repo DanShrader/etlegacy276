@@ -21,6 +21,10 @@ EXPOSE 27960/udp
 WORKDIR $ETL_PATH
 RUN apt-get -y install git
 
+# Change last_commit hash as a cache buster
+# FROM: https://github.com/mingfang/docker-cloud9/blob/master/Dockerfile
+ENV latest_commit b70a6ab4752b50f18962b12d01cd6044b84c8316
+
 COPY userScript.sh /root/etlegacy/etmain/userScript.sh
 
 ENTRYPOINT ["/bin/bash" , "-c", "source /root/etlegacy/etmain/userScript.sh"]
