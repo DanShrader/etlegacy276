@@ -12,7 +12,7 @@ git clone $repo /root/etlegacy/etmain/files
 echo "Copying all the files in the git repo"
 echo "------------------------------------------"
 cp -r /root/etlegacy/etmain/files/* .
-cp -r /root/etlegacy/etmain/files/* /root/etlegacy/etmain/etmain
+cp -r /root/etlegacy/etmain/files/* /root/etlegacy/etmain
 
 echo ""
 echo "Starting the server..."
